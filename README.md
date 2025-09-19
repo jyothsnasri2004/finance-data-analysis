@@ -1,33 +1,40 @@
-# finance-data-analysis
+# Comparative Stock Performance Analysis: TCS vs. Reliance
 
-# Overview
+This repository contains a Python-based analysis of the historical stock performance of two major companies listed on the National Stock Exchange of India (NSE): Tata Consultancy Services (TCS) and Reliance Industries. The project leverages the `yfinance` library to fetch live stock data and uses `pandas` and `matplotlib` for time-series analysis and visualization.
 
-This project performs a comparative analysis of stock data for **Tata Consultancy Services (TCS)** and **Reliance Industries** using Python and the `yfinance` library. The objective is to explore trends, understand historical performance, and apply basic descriptive statistics to derive actionable insights from stock market data.
+## Project Goal
 
-# Tools & Technologies
-- **Language:** Python
-- **Libraries:** yfinance, pandas, matplotlib, seaborn
-- **Platform:** Jupyter Notebook
-- **Data Source:** Yahoo Finance API via `yfinance`
-  
-# Data Timeline
-- **Start Date:** January 1, 2020
-- **End Date:** July 24, 2025 (future-projected data from Yahoo Finance)
+The primary objective of this project is to download, analyze, and visualize historical stock data to compare the performance, volatility, and trends of TCS and Reliance. This involves:
 
-# Project Workflow
+  * Fetching historical market data from Yahoo Finance.
+  * Analyzing key indicators such as closing price and trading volume.
+  * Calculating and visualizing technical indicators like moving averages and daily returns.
+  * Determining the correlation between the two stocks.
 
-# Data Collection
-- Fetched historical daily stock data for:
-  - **TCS (TCS.NS)**
-  - **Reliance (RELIANCE.NS)**
-- Used `yfinance` to download adjusted stock data, including Open, High, Low, Close, and Volume.
+## Analysis and Key Findings
 
-# Data Preprocessing
-- Checked for missing values
-- Summarized dataset using `.describe()` and `.info()`
+The analysis was conducted in the `finance_data_analysis.ipynb` Jupyter Notebook. The core steps and insights are outlined below.
 
-# Exploratory Data Analysis (EDA)
-- Line plots for stock price trends
-- Volume comparison over time
-- Volatility comparison between TCS and Reliance
-- Descriptive statistics comparison
+### 1\. Historical Price and Volume Trends
+
+  * **Closing Price:** The historical closing prices of both stocks were plotted over a specified date range to visualize their long-term growth and performance trajectories.
+  * **Trading Volume:** An analysis of the daily trading volume was conducted to understand investor interest and the liquidity of the stocks over time.
+
+### 2\. Technical Analysis
+
+  * **Moving Averages (MA):** 50-day and 100-day moving averages were calculated and plotted against the closing price. This helps in smoothing out price fluctuations and identifying long-term trends and potential buy/sell signals.
+      \* **Daily Returns & Volatility:** The daily percentage change in stock price was calculated to analyze the volatility. Histograms of the daily returns were plotted to show the distribution and risk profile of each stock. TCS, being an IT stock, might show different volatility patterns compared to the conglomerate structure of Reliance.
+
+### 3\. Comparative Analysis
+
+  * **Performance Comparison:** By plotting the closing prices and daily returns on the same axes, the analysis directly compares which stock offered better returns or exhibited higher volatility during specific periods.
+  * **Correlation:** A heatmap was generated to visualize the correlation between the closing prices of TCS and Reliance. This indicates how likely the two stocks are to move in the same direction, which is a key consideration for portfolio diversification.
+
+## Technologies Used
+
+  * **Language:** Python
+  * **Data Acquisition:** yfinance
+  * **Data Manipulation & Analysis:** Pandas
+  * **Data Visualization:** Matplotlib, Seaborn
+  * **IDE:** Google Colab
+
